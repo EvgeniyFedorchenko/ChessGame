@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public abstract class Piece {
     private final PieceColor pieceColor;
     private Coordinates coordinates;
@@ -18,4 +20,8 @@ public abstract class Piece {
     public Coordinates getCoordinates() {
         return coordinates;
     }
+
+    // White: ♔ ♕ ♖ ♗ ♘ ♙
+    // Black: ♚ ♛ ♜ ♝ ♞ ♟
+    public abstract String returnIcon();
 }

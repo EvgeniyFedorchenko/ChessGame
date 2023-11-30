@@ -3,6 +3,7 @@ public class Main {
 
         Board board = new Board();
         board.renderer();
+        Coordinates coordinates = new Coordinates("A1");
 
     }
 }
