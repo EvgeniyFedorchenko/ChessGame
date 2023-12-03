@@ -1,12 +1,12 @@
-import java.awt.*;
+package Pieces;
 
 public abstract class Piece {
     private final PieceColor pieceColor;
-    private Coordinates coordinates;
+    private PieceCoordinates pieceCoordinates;
 
-    public Piece(PieceColor pieceColor, Coordinates coordinates) {
+    public Piece(PieceColor pieceColor, PieceCoordinates pieceCoordinates) {
         this.pieceColor = pieceColor;
-        this.coordinates = coordinates;
+        this.pieceCoordinates = pieceCoordinates;
     }
 
     public Piece(PieceColor pieceColor) {
@@ -17,11 +17,11 @@ public abstract class Piece {
         return pieceColor;
     }
 
-    public Coordinates getCoordinates() {
-        return coordinates;
+    public PieceCoordinates getCoordinates() {
+        return pieceCoordinates;
     }
 
     // White: ♔ ♕ ♖ ♗ ♘ ♙
     // Black: ♚ ♛ ♜ ♝ ♞ ♟
-    public abstract String returnIcon();
+    public abstract String whatsIsThePiece();
 }
