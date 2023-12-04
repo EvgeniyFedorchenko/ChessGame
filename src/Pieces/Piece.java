@@ -1,27 +1,23 @@
 package Pieces;
 
+import plaingField.Coordinates;
+
+import java.util.List;
+
 public abstract class Piece {
     private final PieceColor pieceColor;
-    private PieceCoordinates pieceCoordinates;
-
-    public Piece(PieceColor pieceColor, PieceCoordinates pieceCoordinates) {
-        this.pieceColor = pieceColor;
-        this.pieceCoordinates = pieceCoordinates;
-    }
 
     public Piece(PieceColor pieceColor) {
         this.pieceColor = pieceColor;
     }
 
-    public PieceColor getColor() {
+    public PieceColor getPieceColor() {
         return pieceColor;
     }
 
-    public PieceCoordinates getCoordinates() {
-        return pieceCoordinates;
-    }
-
-    // White: ♔ ♕ ♖ ♗ ♘ ♙
-    // Black: ♚ ♛ ♜ ♝ ♞ ♟
     public abstract String whatsIsThePiece();
+
+    // @param coordinatesFrom - Лист возможных ходов для фигуры с любой позиции на пустой доске
+    public abstract List<PieceCoordinates> possibleMovesWithoutContext(PieceCoordinates coordinatesFrom);
+
 }

@@ -1,10 +1,10 @@
 package Pieces;
 
-public class Queen extends Piece {
-    public Queen(PieceColor pieceColor, PieceCoordinates pieceCoordinates) {
-        super(pieceColor, pieceCoordinates);
-    }
+import plaingField.Coordinates;
 
+import java.util.List;
+
+public class Queen extends Piece {
     public Queen(PieceColor pieceColor) {
         super(pieceColor);
     }
@@ -12,5 +12,11 @@ public class Queen extends Piece {
 
     public String whatsIsThePiece() {
         return "Queen";
+    }
+
+
+    @Override
+    public List<PieceCoordinates> possibleMovesWithoutContext(PieceCoordinates coordinatesFrom) {
+        return null;
     }
 }

@@ -1,10 +1,10 @@
 package Pieces;
 
-public class Bishop extends Piece {
-    public Bishop(PieceColor pieceColor, PieceCoordinates pieceCoordinates) {
-        super(pieceColor, pieceCoordinates);
-    }
+import plaingField.Coordinates;
 
+import java.util.List;
+
+public class Bishop extends Piece {
     public Bishop(PieceColor pieceColor) {
         super(pieceColor);
     }
@@ -13,4 +13,11 @@ public class Bishop extends Piece {
     public String whatsIsThePiece() {
         return "Bishop";
     }
+
+    @Override
+    public List<PieceCoordinates> possibleMovesWithoutContext(PieceCoordinates coordinatesFrom) {
+    return null;
+    }
+
+
 }

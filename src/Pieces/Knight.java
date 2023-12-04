@@ -1,17 +1,21 @@
 package Pieces;
 
-public class Knight extends Piece {
+import plaingField.Coordinates;
 
-    public Knight(PieceColor pieceColor, PieceCoordinates pieceCoordinates) {
-        super(pieceColor, pieceCoordinates);
-    }
+import java.util.List;
+
+public class Knight extends Piece {
 
     public Knight(PieceColor pieceColor) {
         super(pieceColor);
     }
 
-
     public String whatsIsThePiece() {
         return "Knight";
+    }
+
+    @Override
+    public List<PieceCoordinates> possibleMovesWithoutContext(PieceCoordinates coordinatesFrom) {
+        return null;
     }
 }
